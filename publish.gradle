@@ -1,0 +1,88 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.21.2"
+    }
+}
+
+apply plugin: io.codearte.gradle.nexus.NexusStagingPlugin
+
+nexusStaging {
+    packageGroup "com.google.maps"
+    username System.getenv('JAVA_SONATYPE_USERNAME')
+    password System.getenv('JAVA_SONATYPE_PASSWORD')
+    delayBetweenRetriesInMillis 10000
+    numberOfRetries 5
+}
+
+subprojects { projects ->
+
+    apply plugin: 'maven-publish'
+    apply plugin: 'signing'
+
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                pom {
+                    name = description
+                    url = 'https://developers.google.com/maps'
+                    description = project.description  // use project.* to avoid stackoverflowerror
+
+                    scm {
+                        url = REPO_URL
+                        connection = REPO_GIT
+                        developerConnection = REPO_GIT
+                    }
+
+                    licenses {
+                        license {
+                            name = 'The Apache Software License, Version 2.0'
+                            url = 'https://www.apache.org/licenses/LICENSE-2.0.txt'
+                            distribution = 'repo'
+                        }
+                    }
+
+                    organization {
+                        name = 'Google Inc'
+                        url = 'https://developers.google.com/maps'
+                    }
+
+                    developers {
+                        developer {
+                            id = 'jpoehnelt'
+                            name = 'Justin Poehnelt'
+                        }
+                    }
+                }
+                groupId group
+                version version
+                from components.java
+            }
+        }
+        repositories {
+            maven {
+                url version.endsWith('SNAPSHOT') ? PUBLISH_SNAPSHOT_URL : PUBLISH_MAVEN_URL
+                credentials {
+                    username System.getenv('JAVA_SONATYPE_USERNAME')
+                    password System.getenv('JAVA_SONATYPE_PASSWORD')
+                }
+            }
+        }
+    }
+
+    signing {
+        useInMemoryPgpKeys(
+                System.getenv('JAVA_SIGNING_KEY_ID'),
+                System.getenv('JAVA_SIGNING_KEY_VALUE'),
+                System.getenv('JAVA_SIGNING_KEY_PASSWORD')
+        )
+        sign publishing.publications.maven
+    }
+
+}
