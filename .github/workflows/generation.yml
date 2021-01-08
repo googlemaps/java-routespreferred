@@ -15,7 +15,7 @@
 name: Generation
 on:
   push:
-    branches: [master]
+    branches: [master, main]
     paths: [".github/workflows/generation.yml"]
   schedule:
     - cron: "*/30 * * * *"
@@ -26,7 +26,7 @@ jobs:
       - name: Generate
         uses: googlemaps/.github/actions/gapic@master
         with:
-          target: //google/maps/routes/v1:google-maps-routes-v1-java-postprocess
+          target: //google/maps/routes/v1:google-maps-routes-v1-java
           github_token: ${{ secrets.SYNCED_GITHUB_TOKEN_REPO }}
           tar_path: google-maps-routes-v1-java
           tar_strip_components: 1
