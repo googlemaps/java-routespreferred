@@ -31,6 +31,7 @@ jobs:
           tar_path: google-maps-routes-v1-java
           tar_strip_components: 1
           cache_service_account: ${{ secrets.SYNCED_BAZEL_CACHE_SERVICE_ACCOUNT }}
+          upstream: main
           ignore: |
             gradle/*
             gradlew
