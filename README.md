@@ -6,7 +6,7 @@
 [![codecov](https://codecov.io/gh/googlemaps/java-routespreferred/branch/master/graph/badge.svg)](https://codecov.io/gh/googlemaps/java-routespreferred)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-Java idiomatic client for Google Maps Platform Routes Preferred Preferred API.
+Java idiomatic client for Google Maps Platform Routes Preferred API.
 
 > **NOTE:** The libraries in this repository should be considered experimental at this time and breaking changes should be expected.
 
