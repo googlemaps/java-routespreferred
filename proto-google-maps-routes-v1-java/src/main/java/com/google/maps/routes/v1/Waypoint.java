@@ -214,6 +214,17 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string place_id = 2;</code>
+   * @return Whether the placeId field is set.
+   */
+  public boolean hasPlaceId() {
+    return locationTypeCase_ == 2;
+  }
+  /**
+   * <pre>
+   * The POI Place ID associated with the waypoint.
+   * </pre>
+   *
+   * <code>string place_id = 2;</code>
    * @return The placeId.
    */
   public java.lang.String getPlaceId() {
@@ -932,6 +943,18 @@ private static final long serialVersionUID = 0L;
       return locationBuilder_;
     }
 
+    /**
+     * <pre>
+     * The POI Place ID associated with the waypoint.
+     * </pre>
+     *
+     * <code>string place_id = 2;</code>
+     * @return Whether the placeId field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlaceId() {
+      return locationTypeCase_ == 2;
+    }
     /**
      * <pre>
      * The POI Place ID associated with the waypoint.

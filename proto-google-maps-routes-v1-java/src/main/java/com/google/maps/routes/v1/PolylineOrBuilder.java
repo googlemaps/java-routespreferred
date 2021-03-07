@@ -14,6 +14,16 @@ public interface PolylineOrBuilder extends
    * </pre>
    *
    * <code>string encoded_polyline = 1;</code>
+   * @return Whether the encodedPolyline field is set.
+   */
+  boolean hasEncodedPolyline();
+  /**
+   * <pre>
+   * The string encoding of the polyline using the [polyline encoding
+   * algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm)
+   * </pre>
+   *
+   * <code>string encoded_polyline = 1;</code>
    * @return The encodedPolyline.
    */
   java.lang.String getEncodedPolyline();

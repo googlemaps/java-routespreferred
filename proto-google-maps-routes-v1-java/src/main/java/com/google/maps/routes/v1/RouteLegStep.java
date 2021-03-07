@@ -123,6 +123,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 58: {
+            com.google.maps.routes.v1.RouteLegStepTravelAdvisory.Builder subBuilder = null;
+            if (travelAdvisory_ != null) {
+              subBuilder = travelAdvisory_.toBuilder();
+            }
+            travelAdvisory_ = input.readMessage(com.google.maps.routes.v1.RouteLegStepTravelAdvisory.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(travelAdvisory_);
+              travelAdvisory_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -367,6 +380,47 @@ private static final long serialVersionUID = 0L;
     return getNavigationInstruction();
   }
 
+  public static final int TRAVEL_ADVISORY_FIELD_NUMBER = 7;
+  private com.google.maps.routes.v1.RouteLegStepTravelAdvisory travelAdvisory_;
+  /**
+   * <pre>
+   * Encapsulates the additional information that the user should be informed
+   * about, such as possible traffic zone restriction etc. on a leg step.
+   * </pre>
+   *
+   * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+   * @return Whether the travelAdvisory field is set.
+   */
+  @java.lang.Override
+  public boolean hasTravelAdvisory() {
+    return travelAdvisory_ != null;
+  }
+  /**
+   * <pre>
+   * Encapsulates the additional information that the user should be informed
+   * about, such as possible traffic zone restriction etc. on a leg step.
+   * </pre>
+   *
+   * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+   * @return The travelAdvisory.
+   */
+  @java.lang.Override
+  public com.google.maps.routes.v1.RouteLegStepTravelAdvisory getTravelAdvisory() {
+    return travelAdvisory_ == null ? com.google.maps.routes.v1.RouteLegStepTravelAdvisory.getDefaultInstance() : travelAdvisory_;
+  }
+  /**
+   * <pre>
+   * Encapsulates the additional information that the user should be informed
+   * about, such as possible traffic zone restriction etc. on a leg step.
+   * </pre>
+   *
+   * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+   */
+  @java.lang.Override
+  public com.google.maps.routes.v1.RouteLegStepTravelAdvisoryOrBuilder getTravelAdvisoryOrBuilder() {
+    return getTravelAdvisory();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -398,6 +452,9 @@ private static final long serialVersionUID = 0L;
     }
     if (navigationInstruction_ != null) {
       output.writeMessage(6, getNavigationInstruction());
+    }
+    if (travelAdvisory_ != null) {
+      output.writeMessage(7, getTravelAdvisory());
     }
     unknownFields.writeTo(output);
   }
@@ -431,6 +488,10 @@ private static final long serialVersionUID = 0L;
     if (navigationInstruction_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getNavigationInstruction());
+    }
+    if (travelAdvisory_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getTravelAdvisory());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -474,6 +535,11 @@ private static final long serialVersionUID = 0L;
       if (!getNavigationInstruction()
           .equals(other.getNavigationInstruction())) return false;
     }
+    if (hasTravelAdvisory() != other.hasTravelAdvisory()) return false;
+    if (hasTravelAdvisory()) {
+      if (!getTravelAdvisory()
+          .equals(other.getTravelAdvisory())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -506,6 +572,10 @@ private static final long serialVersionUID = 0L;
     if (hasNavigationInstruction()) {
       hash = (37 * hash) + NAVIGATION_INSTRUCTION_FIELD_NUMBER;
       hash = (53 * hash) + getNavigationInstruction().hashCode();
+    }
+    if (hasTravelAdvisory()) {
+      hash = (37 * hash) + TRAVEL_ADVISORY_FIELD_NUMBER;
+      hash = (53 * hash) + getTravelAdvisory().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -677,6 +747,12 @@ private static final long serialVersionUID = 0L;
         navigationInstruction_ = null;
         navigationInstructionBuilder_ = null;
       }
+      if (travelAdvisoryBuilder_ == null) {
+        travelAdvisory_ = null;
+      } else {
+        travelAdvisory_ = null;
+        travelAdvisoryBuilder_ = null;
+      }
       return this;
     }
 
@@ -728,6 +804,11 @@ private static final long serialVersionUID = 0L;
         result.navigationInstruction_ = navigationInstruction_;
       } else {
         result.navigationInstruction_ = navigationInstructionBuilder_.build();
+      }
+      if (travelAdvisoryBuilder_ == null) {
+        result.travelAdvisory_ = travelAdvisory_;
+      } else {
+        result.travelAdvisory_ = travelAdvisoryBuilder_.build();
       }
       onBuilt();
       return result;
@@ -794,6 +875,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasNavigationInstruction()) {
         mergeNavigationInstruction(other.getNavigationInstruction());
+      }
+      if (other.hasTravelAdvisory()) {
+        mergeTravelAdvisory(other.getTravelAdvisory());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1661,6 +1745,170 @@ private static final long serialVersionUID = 0L;
         navigationInstruction_ = null;
       }
       return navigationInstructionBuilder_;
+    }
+
+    private com.google.maps.routes.v1.RouteLegStepTravelAdvisory travelAdvisory_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.maps.routes.v1.RouteLegStepTravelAdvisory, com.google.maps.routes.v1.RouteLegStepTravelAdvisory.Builder, com.google.maps.routes.v1.RouteLegStepTravelAdvisoryOrBuilder> travelAdvisoryBuilder_;
+    /**
+     * <pre>
+     * Encapsulates the additional information that the user should be informed
+     * about, such as possible traffic zone restriction etc. on a leg step.
+     * </pre>
+     *
+     * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+     * @return Whether the travelAdvisory field is set.
+     */
+    public boolean hasTravelAdvisory() {
+      return travelAdvisoryBuilder_ != null || travelAdvisory_ != null;
+    }
+    /**
+     * <pre>
+     * Encapsulates the additional information that the user should be informed
+     * about, such as possible traffic zone restriction etc. on a leg step.
+     * </pre>
+     *
+     * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+     * @return The travelAdvisory.
+     */
+    public com.google.maps.routes.v1.RouteLegStepTravelAdvisory getTravelAdvisory() {
+      if (travelAdvisoryBuilder_ == null) {
+        return travelAdvisory_ == null ? com.google.maps.routes.v1.RouteLegStepTravelAdvisory.getDefaultInstance() : travelAdvisory_;
+      } else {
+        return travelAdvisoryBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Encapsulates the additional information that the user should be informed
+     * about, such as possible traffic zone restriction etc. on a leg step.
+     * </pre>
+     *
+     * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+     */
+    public Builder setTravelAdvisory(com.google.maps.routes.v1.RouteLegStepTravelAdvisory value) {
+      if (travelAdvisoryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        travelAdvisory_ = value;
+        onChanged();
+      } else {
+        travelAdvisoryBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Encapsulates the additional information that the user should be informed
+     * about, such as possible traffic zone restriction etc. on a leg step.
+     * </pre>
+     *
+     * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+     */
+    public Builder setTravelAdvisory(
+        com.google.maps.routes.v1.RouteLegStepTravelAdvisory.Builder builderForValue) {
+      if (travelAdvisoryBuilder_ == null) {
+        travelAdvisory_ = builderForValue.build();
+        onChanged();
+      } else {
+        travelAdvisoryBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Encapsulates the additional information that the user should be informed
+     * about, such as possible traffic zone restriction etc. on a leg step.
+     * </pre>
+     *
+     * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+     */
+    public Builder mergeTravelAdvisory(com.google.maps.routes.v1.RouteLegStepTravelAdvisory value) {
+      if (travelAdvisoryBuilder_ == null) {
+        if (travelAdvisory_ != null) {
+          travelAdvisory_ =
+            com.google.maps.routes.v1.RouteLegStepTravelAdvisory.newBuilder(travelAdvisory_).mergeFrom(value).buildPartial();
+        } else {
+          travelAdvisory_ = value;
+        }
+        onChanged();
+      } else {
+        travelAdvisoryBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Encapsulates the additional information that the user should be informed
+     * about, such as possible traffic zone restriction etc. on a leg step.
+     * </pre>
+     *
+     * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+     */
+    public Builder clearTravelAdvisory() {
+      if (travelAdvisoryBuilder_ == null) {
+        travelAdvisory_ = null;
+        onChanged();
+      } else {
+        travelAdvisory_ = null;
+        travelAdvisoryBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Encapsulates the additional information that the user should be informed
+     * about, such as possible traffic zone restriction etc. on a leg step.
+     * </pre>
+     *
+     * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+     */
+    public com.google.maps.routes.v1.RouteLegStepTravelAdvisory.Builder getTravelAdvisoryBuilder() {
+      
+      onChanged();
+      return getTravelAdvisoryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Encapsulates the additional information that the user should be informed
+     * about, such as possible traffic zone restriction etc. on a leg step.
+     * </pre>
+     *
+     * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+     */
+    public com.google.maps.routes.v1.RouteLegStepTravelAdvisoryOrBuilder getTravelAdvisoryOrBuilder() {
+      if (travelAdvisoryBuilder_ != null) {
+        return travelAdvisoryBuilder_.getMessageOrBuilder();
+      } else {
+        return travelAdvisory_ == null ?
+            com.google.maps.routes.v1.RouteLegStepTravelAdvisory.getDefaultInstance() : travelAdvisory_;
+      }
+    }
+    /**
+     * <pre>
+     * Encapsulates the additional information that the user should be informed
+     * about, such as possible traffic zone restriction etc. on a leg step.
+     * </pre>
+     *
+     * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.maps.routes.v1.RouteLegStepTravelAdvisory, com.google.maps.routes.v1.RouteLegStepTravelAdvisory.Builder, com.google.maps.routes.v1.RouteLegStepTravelAdvisoryOrBuilder> 
+        getTravelAdvisoryFieldBuilder() {
+      if (travelAdvisoryBuilder_ == null) {
+        travelAdvisoryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.maps.routes.v1.RouteLegStepTravelAdvisory, com.google.maps.routes.v1.RouteLegStepTravelAdvisory.Builder, com.google.maps.routes.v1.RouteLegStepTravelAdvisoryOrBuilder>(
+                getTravelAdvisory(),
+                getParentForChildren(),
+                isClean());
+        travelAdvisory_ = null;
+      }
+      return travelAdvisoryBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

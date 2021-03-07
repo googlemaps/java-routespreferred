@@ -18,8 +18,8 @@ repositories {
 }
 
 dependencies {
-  compile 'io.grpc:grpc-stub:1.30.0'
-  compile 'io.grpc:grpc-protobuf:1.30.0'
+  compile 'io.grpc:grpc-stub:1.36.0'
+  compile 'io.grpc:grpc-protobuf:1.36.0'
   compile project(':proto-google-maps-routes-v1-java')
 }
 

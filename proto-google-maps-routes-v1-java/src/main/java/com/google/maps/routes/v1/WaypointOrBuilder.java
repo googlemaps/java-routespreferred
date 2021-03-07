@@ -43,6 +43,15 @@ public interface WaypointOrBuilder extends
    * </pre>
    *
    * <code>string place_id = 2;</code>
+   * @return Whether the placeId field is set.
+   */
+  boolean hasPlaceId();
+  /**
+   * <pre>
+   * The POI Place ID associated with the waypoint.
+   * </pre>
+   *
+   * <code>string place_id = 2;</code>
    * @return The placeId.
    */
   java.lang.String getPlaceId();

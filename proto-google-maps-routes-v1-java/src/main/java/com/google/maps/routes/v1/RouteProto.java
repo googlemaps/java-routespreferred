@@ -30,6 +30,11 @@ public final class RouteProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_maps_routes_v1_RouteLegTravelAdvisory_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_maps_routes_v1_RouteLegStepTravelAdvisory_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_maps_routes_v1_RouteLegStepTravelAdvisory_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_maps_routes_v1_TrafficRestriction_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -93,56 +98,63 @@ public final class RouteProto {
       ".v1.TrafficRestriction\0222\n\ttoll_info\030\002 \001(" +
       "\0132\037.google.maps.routes.v1.TollInfo\022L\n\027sp" +
       "eed_reading_intervals\030\003 \003(\0132+.google.map" +
-      "s.routes.v1.SpeedReadingInterval\"L\n\026Rout" +
-      "eLegTravelAdvisory\0222\n\ttoll_info\030\001 \001(\0132\037." +
-      "google.maps.routes.v1.TollInfo\"\203\001\n\022Traff" +
-      "icRestriction\022m\n(license_plate_last_char" +
-      "acter_restriction\030\001 \001(\0132;.google.maps.ro" +
-      "utes.v1.LicensePlateLastCharacterRestric" +
-      "tion\"G\n$LicensePlateLastCharacterRestric" +
-      "tion\022\037\n\027allowed_last_characters\030\001 \003(\t\"\243\003" +
-      "\n\010RouteLeg\022\027\n\017distance_meters\030\001 \001(\005\022+\n\010d" +
-      "uration\030\002 \001(\0132\031.google.protobuf.Duration" +
-      "\0222\n\017static_duration\030\003 \001(\0132\031.google.proto" +
-      "buf.Duration\0221\n\010polyline\030\004 \001(\0132\037.google." +
-      "maps.routes.v1.Polyline\0227\n\016start_locatio" +
+      "s.routes.v1.SpeedReadingInterval\"\232\001\n\026Rou" +
+      "teLegTravelAdvisory\0222\n\ttoll_info\030\001 \001(\0132\037" +
+      ".google.maps.routes.v1.TollInfo\022L\n\027speed" +
+      "_reading_intervals\030\002 \003(\0132+.google.maps.r" +
+      "outes.v1.SpeedReadingInterval\"j\n\032RouteLe" +
+      "gStepTravelAdvisory\022L\n\027speed_reading_int" +
+      "ervals\030\001 \003(\0132+.google.maps.routes.v1.Spe" +
+      "edReadingInterval\"\203\001\n\022TrafficRestriction" +
+      "\022m\n(license_plate_last_character_restric" +
+      "tion\030\001 \001(\0132;.google.maps.routes.v1.Licen" +
+      "sePlateLastCharacterRestriction\"G\n$Licen" +
+      "sePlateLastCharacterRestriction\022\037\n\027allow" +
+      "ed_last_characters\030\001 \003(\t\"\243\003\n\010RouteLeg\022\027\n" +
+      "\017distance_meters\030\001 \001(\005\022+\n\010duration\030\002 \001(\013" +
+      "2\031.google.protobuf.Duration\0222\n\017static_du" +
+      "ration\030\003 \001(\0132\031.google.protobuf.Duration\022" +
+      "1\n\010polyline\030\004 \001(\0132\037.google.maps.routes.v" +
+      "1.Polyline\0227\n\016start_location\030\005 \001(\0132\037.goo" +
+      "gle.maps.routes.v1.Location\0225\n\014end_locat" +
+      "ion\030\006 \001(\0132\037.google.maps.routes.v1.Locati" +
+      "on\0222\n\005steps\030\007 \003(\0132#.google.maps.routes.v" +
+      "1.RouteLegStep\022F\n\017travel_advisory\030\010 \001(\0132" +
+      "-.google.maps.routes.v1.RouteLegTravelAd" +
+      "visory\"7\n\010TollInfo\022+\n\017estimated_price\030\001 " +
+      "\003(\0132\022.google.type.Money\"\230\003\n\014RouteLegStep" +
+      "\022\027\n\017distance_meters\030\001 \001(\005\0222\n\017static_dura" +
+      "tion\030\002 \001(\0132\031.google.protobuf.Duration\0221\n" +
+      "\010polyline\030\003 \001(\0132\037.google.maps.routes.v1." +
+      "Polyline\0227\n\016start_location\030\004 \001(\0132\037.googl" +
+      "e.maps.routes.v1.Location\0225\n\014end_locatio" +
       "n\030\005 \001(\0132\037.google.maps.routes.v1.Location" +
-      "\0225\n\014end_location\030\006 \001(\0132\037.google.maps.rou" +
-      "tes.v1.Location\0222\n\005steps\030\007 \003(\0132#.google." +
-      "maps.routes.v1.RouteLegStep\022F\n\017travel_ad" +
-      "visory\030\010 \001(\0132-.google.maps.routes.v1.Rou" +
-      "teLegTravelAdvisory\"7\n\010TollInfo\022+\n\017estim" +
-      "ated_price\030\001 \003(\0132\022.google.type.Money\"\314\002\n" +
-      "\014RouteLegStep\022\027\n\017distance_meters\030\001 \001(\005\0222" +
-      "\n\017static_duration\030\002 \001(\0132\031.google.protobu" +
-      "f.Duration\0221\n\010polyline\030\003 \001(\0132\037.google.ma" +
-      "ps.routes.v1.Polyline\0227\n\016start_location\030" +
-      "\004 \001(\0132\037.google.maps.routes.v1.Location\0225" +
-      "\n\014end_location\030\005 \001(\0132\037.google.maps.route" +
-      "s.v1.Location\022L\n\026navigation_instruction\030" +
-      "\006 \001(\0132,.google.maps.routes.v1.Navigation" +
-      "Instruction\"`\n\025NavigationInstruction\0221\n\010" +
-      "maneuver\030\001 \001(\0162\037.google.maps.routes.v1.M" +
-      "aneuver\022\024\n\014instructions\030\002 \001(\t\"\345\001\n\024SpeedR" +
-      "eadingInterval\022\"\n\032start_polyline_point_i" +
-      "ndex\030\001 \001(\005\022 \n\030end_polyline_point_index\030\002" +
-      " \001(\005\022@\n\005speed\030\003 \001(\01621.google.maps.routes" +
-      ".v1.SpeedReadingInterval.Speed\"E\n\005Speed\022" +
-      "\025\n\021SPEED_UNSPECIFIED\020\000\022\n\n\006NORMAL\020\001\022\010\n\004SL" +
-      "OW\020\002\022\017\n\013TRAFFIC_JAM\020\003*\332\002\n\010Maneuver\022\030\n\024MA" +
-      "NEUVER_UNSPECIFIED\020\000\022\024\n\020TURN_SLIGHT_LEFT" +
-      "\020\001\022\023\n\017TURN_SHARP_LEFT\020\002\022\016\n\nUTURN_LEFT\020\003\022" +
-      "\r\n\tTURN_LEFT\020\004\022\025\n\021TURN_SLIGHT_RIGHT\020\005\022\024\n" +
-      "\020TURN_SHARP_RIGHT\020\006\022\017\n\013UTURN_RIGHT\020\007\022\016\n\n" +
-      "TURN_RIGHT\020\010\022\014\n\010STRAIGHT\020\t\022\r\n\tRAMP_LEFT\020" +
-      "\n\022\016\n\nRAMP_RIGHT\020\013\022\t\n\005MERGE\020\014\022\r\n\tFORK_LEF" +
-      "T\020\r\022\016\n\nFORK_RIGHT\020\016\022\t\n\005FERRY\020\017\022\017\n\013FERRY_" +
-      "TRAIN\020\020\022\023\n\017ROUNDABOUT_LEFT\020\021\022\024\n\020ROUNDABO" +
-      "UT_RIGHT\020\022B\240\001\n\031com.google.maps.routes.v1" +
-      "B\nRouteProtoP\001Z;google.golang.org/genpro" +
-      "to/googleapis/maps/routes/v1;routes\370\001\001\242\002" +
-      "\004GMRS\252\002\025Google.Maps.Routes.V1\312\002\025Google\\M" +
-      "aps\\Routes\\V1b\006proto3"
+      "\022L\n\026navigation_instruction\030\006 \001(\0132,.googl" +
+      "e.maps.routes.v1.NavigationInstruction\022J" +
+      "\n\017travel_advisory\030\007 \001(\01321.google.maps.ro" +
+      "utes.v1.RouteLegStepTravelAdvisory\"`\n\025Na" +
+      "vigationInstruction\0221\n\010maneuver\030\001 \001(\0162\037." +
+      "google.maps.routes.v1.Maneuver\022\024\n\014instru" +
+      "ctions\030\002 \001(\t\"\345\001\n\024SpeedReadingInterval\022\"\n" +
+      "\032start_polyline_point_index\030\001 \001(\005\022 \n\030end" +
+      "_polyline_point_index\030\002 \001(\005\022@\n\005speed\030\003 \001" +
+      "(\01621.google.maps.routes.v1.SpeedReadingI" +
+      "nterval.Speed\"E\n\005Speed\022\025\n\021SPEED_UNSPECIF" +
+      "IED\020\000\022\n\n\006NORMAL\020\001\022\010\n\004SLOW\020\002\022\017\n\013TRAFFIC_J" +
+      "AM\020\003*\332\002\n\010Maneuver\022\030\n\024MANEUVER_UNSPECIFIE" +
+      "D\020\000\022\024\n\020TURN_SLIGHT_LEFT\020\001\022\023\n\017TURN_SHARP_" +
+      "LEFT\020\002\022\016\n\nUTURN_LEFT\020\003\022\r\n\tTURN_LEFT\020\004\022\025\n" +
+      "\021TURN_SLIGHT_RIGHT\020\005\022\024\n\020TURN_SHARP_RIGHT" +
+      "\020\006\022\017\n\013UTURN_RIGHT\020\007\022\016\n\nTURN_RIGHT\020\010\022\014\n\010S" +
+      "TRAIGHT\020\t\022\r\n\tRAMP_LEFT\020\n\022\016\n\nRAMP_RIGHT\020\013" +
+      "\022\t\n\005MERGE\020\014\022\r\n\tFORK_LEFT\020\r\022\016\n\nFORK_RIGHT" +
+      "\020\016\022\t\n\005FERRY\020\017\022\017\n\013FERRY_TRAIN\020\020\022\023\n\017ROUNDA" +
+      "BOUT_LEFT\020\021\022\024\n\020ROUNDABOUT_RIGHT\020\022B\240\001\n\031co" +
+      "m.google.maps.routes.v1B\nRouteProtoP\001Z;g" +
+      "oogle.golang.org/genproto/googleapis/map" +
+      "s/routes/v1;routes\370\001\001\242\002\004GMRS\252\002\025Google.Ma" +
+      "ps.Routes.V1\312\002\025Google\\Maps\\Routes\\V1b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -170,45 +182,51 @@ public final class RouteProto {
     internal_static_google_maps_routes_v1_RouteLegTravelAdvisory_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_maps_routes_v1_RouteLegTravelAdvisory_descriptor,
-        new java.lang.String[] { "TollInfo", });
-    internal_static_google_maps_routes_v1_TrafficRestriction_descriptor =
+        new java.lang.String[] { "TollInfo", "SpeedReadingIntervals", });
+    internal_static_google_maps_routes_v1_RouteLegStepTravelAdvisory_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_google_maps_routes_v1_RouteLegStepTravelAdvisory_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_maps_routes_v1_RouteLegStepTravelAdvisory_descriptor,
+        new java.lang.String[] { "SpeedReadingIntervals", });
+    internal_static_google_maps_routes_v1_TrafficRestriction_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_google_maps_routes_v1_TrafficRestriction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_maps_routes_v1_TrafficRestriction_descriptor,
         new java.lang.String[] { "LicensePlateLastCharacterRestriction", });
     internal_static_google_maps_routes_v1_LicensePlateLastCharacterRestriction_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_google_maps_routes_v1_LicensePlateLastCharacterRestriction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_maps_routes_v1_LicensePlateLastCharacterRestriction_descriptor,
         new java.lang.String[] { "AllowedLastCharacters", });
     internal_static_google_maps_routes_v1_RouteLeg_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_google_maps_routes_v1_RouteLeg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_maps_routes_v1_RouteLeg_descriptor,
         new java.lang.String[] { "DistanceMeters", "Duration", "StaticDuration", "Polyline", "StartLocation", "EndLocation", "Steps", "TravelAdvisory", });
     internal_static_google_maps_routes_v1_TollInfo_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_google_maps_routes_v1_TollInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_maps_routes_v1_TollInfo_descriptor,
         new java.lang.String[] { "EstimatedPrice", });
     internal_static_google_maps_routes_v1_RouteLegStep_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_google_maps_routes_v1_RouteLegStep_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_maps_routes_v1_RouteLegStep_descriptor,
-        new java.lang.String[] { "DistanceMeters", "StaticDuration", "Polyline", "StartLocation", "EndLocation", "NavigationInstruction", });
+        new java.lang.String[] { "DistanceMeters", "StaticDuration", "Polyline", "StartLocation", "EndLocation", "NavigationInstruction", "TravelAdvisory", });
     internal_static_google_maps_routes_v1_NavigationInstruction_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_google_maps_routes_v1_NavigationInstruction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_maps_routes_v1_NavigationInstruction_descriptor,
         new java.lang.String[] { "Maneuver", "Instructions", });
     internal_static_google_maps_routes_v1_SpeedReadingInterval_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_google_maps_routes_v1_SpeedReadingInterval_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_maps_routes_v1_SpeedReadingInterval_descriptor,
