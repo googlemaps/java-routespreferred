@@ -31,22 +31,22 @@ public final class RoutesServiceProto {
       ".proto\0323google/maps/routes/v1/compute_ro" +
       "utes_response.proto\0320google/maps/routes/" +
       "v1/route_matrix_element.proto\032\027google/ap" +
-      "i/client.proto2\230\003\n\017RoutesPreferred\022\210\001\n\rC" +
+      "i/client.proto2\255\003\n\017RoutesPreferred\022\235\001\n\rC" +
       "omputeRoutes\022+.google.maps.routes.v1.Com" +
       "puteRoutesRequest\032,.google.maps.routes.v" +
-      "1.ComputeRoutesResponse\"\034\202\323\344\223\002\026\"\021/v1:com" +
-      "puteRoutes:\001*\022\226\001\n\022ComputeRouteMatrix\0220.g" +
-      "oogle.maps.routes.v1.ComputeRouteMatrixR" +
-      "equest\032).google.maps.routes.v1.RouteMatr" +
-      "ixElement\"!\202\323\344\223\002\033\"\026/v1:computeRouteMatri" +
-      "x:\001*0\001\032a\312A\036routespreferred.googleapis.co" +
-      "m\322A=https://www.googleapis.com/auth/maps" +
-      "-platform.routespreferredB\250\001\n\031com.google" +
-      ".maps.routes.v1B\022RoutesServiceProtoP\001Z;g" +
-      "oogle.golang.org/genproto/googleapis/map" +
-      "s/routes/v1;routes\370\001\001\242\002\004GMRS\252\002\025Google.Ma" +
-      "ps.Routes.V1\312\002\025Google\\Maps\\Routes\\V1b\006pr" +
-      "oto3"
+      "1.ComputeRoutesResponse\"1\202\323\344\223\002\026\"\021/v1:com" +
+      "puteRoutes:\001*\332A\022origin,destination\022\226\001\n\022C" +
+      "omputeRouteMatrix\0220.google.maps.routes.v" +
+      "1.ComputeRouteMatrixRequest\032).google.map" +
+      "s.routes.v1.RouteMatrixElement\"!\202\323\344\223\002\033\"\026" +
+      "/v1:computeRouteMatrix:\001*0\001\032a\312A\036routespr" +
+      "eferred.googleapis.com\322A=https://www.goo" +
+      "gleapis.com/auth/maps-platform.routespre" +
+      "ferredB\250\001\n\031com.google.maps.routes.v1B\022Ro" +
+      "utesServiceProtoP\001Z;google.golang.org/ge" +
+      "nproto/googleapis/maps/routes/v1;routes\370" +
+      "\001\001\242\002\004GMRS\252\002\025Google.Maps.Routes.V1\312\002\025Goog" +
+      "le\\Maps\\Routes\\V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -62,6 +62,7 @@ public final class RoutesServiceProto {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
     registry.add(com.google.api.ClientProto.oauthScopes);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

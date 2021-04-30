@@ -45,4 +45,83 @@ public interface RouteLegTravelAdvisoryOrBuilder extends
    * <code>.google.maps.routes.v1.TollInfo toll_info = 1;</code>
    */
   com.google.maps.routes.v1.TollInfoOrBuilder getTollInfoOrBuilder();
+
+  /**
+   * <pre>
+   * Speed reading intervals detailing traffic density. Applicable in case of
+   * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
+   * The intervals cover the entire polyline of the RouteLg without overlaps,
+   * i.e. the start point of a given interval coincides with the end point of
+   * the preceding interval.
+   * Example:
+   *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+   *     speed_reading_intervals: [A,C), [C,D), [D,G).
+   * </pre>
+   *
+   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+   */
+  java.util.List<com.google.maps.routes.v1.SpeedReadingInterval> 
+      getSpeedReadingIntervalsList();
+  /**
+   * <pre>
+   * Speed reading intervals detailing traffic density. Applicable in case of
+   * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
+   * The intervals cover the entire polyline of the RouteLg without overlaps,
+   * i.e. the start point of a given interval coincides with the end point of
+   * the preceding interval.
+   * Example:
+   *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+   *     speed_reading_intervals: [A,C), [C,D), [D,G).
+   * </pre>
+   *
+   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+   */
+  com.google.maps.routes.v1.SpeedReadingInterval getSpeedReadingIntervals(int index);
+  /**
+   * <pre>
+   * Speed reading intervals detailing traffic density. Applicable in case of
+   * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
+   * The intervals cover the entire polyline of the RouteLg without overlaps,
+   * i.e. the start point of a given interval coincides with the end point of
+   * the preceding interval.
+   * Example:
+   *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+   *     speed_reading_intervals: [A,C), [C,D), [D,G).
+   * </pre>
+   *
+   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+   */
+  int getSpeedReadingIntervalsCount();
+  /**
+   * <pre>
+   * Speed reading intervals detailing traffic density. Applicable in case of
+   * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
+   * The intervals cover the entire polyline of the RouteLg without overlaps,
+   * i.e. the start point of a given interval coincides with the end point of
+   * the preceding interval.
+   * Example:
+   *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+   *     speed_reading_intervals: [A,C), [C,D), [D,G).
+   * </pre>
+   *
+   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+   */
+  java.util.List<? extends com.google.maps.routes.v1.SpeedReadingIntervalOrBuilder> 
+      getSpeedReadingIntervalsOrBuilderList();
+  /**
+   * <pre>
+   * Speed reading intervals detailing traffic density. Applicable in case of
+   * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
+   * The intervals cover the entire polyline of the RouteLg without overlaps,
+   * i.e. the start point of a given interval coincides with the end point of
+   * the preceding interval.
+   * Example:
+   *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+   *     speed_reading_intervals: [A,C), [C,D), [D,G).
+   * </pre>
+   *
+   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+   */
+  com.google.maps.routes.v1.SpeedReadingIntervalOrBuilder getSpeedReadingIntervalsOrBuilder(
+      int index);
 }

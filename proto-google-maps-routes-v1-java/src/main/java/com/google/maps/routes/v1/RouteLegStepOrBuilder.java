@@ -158,4 +158,34 @@ public interface RouteLegStepOrBuilder extends
    * <code>.google.maps.routes.v1.NavigationInstruction navigation_instruction = 6;</code>
    */
   com.google.maps.routes.v1.NavigationInstructionOrBuilder getNavigationInstructionOrBuilder();
+
+  /**
+   * <pre>
+   * Encapsulates the additional information that the user should be informed
+   * about, such as possible traffic zone restriction etc. on a leg step.
+   * </pre>
+   *
+   * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+   * @return Whether the travelAdvisory field is set.
+   */
+  boolean hasTravelAdvisory();
+  /**
+   * <pre>
+   * Encapsulates the additional information that the user should be informed
+   * about, such as possible traffic zone restriction etc. on a leg step.
+   * </pre>
+   *
+   * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+   * @return The travelAdvisory.
+   */
+  com.google.maps.routes.v1.RouteLegStepTravelAdvisory getTravelAdvisory();
+  /**
+   * <pre>
+   * Encapsulates the additional information that the user should be informed
+   * about, such as possible traffic zone restriction etc. on a leg step.
+   * </pre>
+   *
+   * <code>.google.maps.routes.v1.RouteLegStepTravelAdvisory travel_advisory = 7;</code>
+   */
+  com.google.maps.routes.v1.RouteLegStepTravelAdvisoryOrBuilder getTravelAdvisoryOrBuilder();
 }

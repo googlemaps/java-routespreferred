@@ -153,6 +153,18 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string encoded_polyline = 1;</code>
+   * @return Whether the encodedPolyline field is set.
+   */
+  public boolean hasEncodedPolyline() {
+    return polylineTypeCase_ == 1;
+  }
+  /**
+   * <pre>
+   * The string encoding of the polyline using the [polyline encoding
+   * algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm)
+   * </pre>
+   *
+   * <code>string encoded_polyline = 1;</code>
    * @return The encodedPolyline.
    */
   public java.lang.String getEncodedPolyline() {
@@ -616,6 +628,19 @@ private static final long serialVersionUID = 0L;
     }
 
 
+    /**
+     * <pre>
+     * The string encoding of the polyline using the [polyline encoding
+     * algorithm](https://developers.google.com/maps/documentation/utilities/polylinealgorithm)
+     * </pre>
+     *
+     * <code>string encoded_polyline = 1;</code>
+     * @return Whether the encodedPolyline field is set.
+     */
+    @java.lang.Override
+    public boolean hasEncodedPolyline() {
+      return polylineTypeCase_ == 1;
+    }
     /**
      * <pre>
      * The string encoding of the polyline using the [polyline encoding

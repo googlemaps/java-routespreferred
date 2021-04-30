@@ -1,19 +1,6 @@
 package com.google.maps.routes.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -179,7 +166,7 @@ public final class RoutesPreferredGrpc {
      */
     public void computeRoutes(com.google.maps.routes.v1.ComputeRoutesRequest request,
         io.grpc.stub.StreamObserver<com.google.maps.routes.v1.ComputeRoutesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getComputeRoutesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getComputeRoutesMethod(), responseObserver);
     }
 
     /**
@@ -218,21 +205,21 @@ public final class RoutesPreferredGrpc {
      */
     public void computeRouteMatrix(com.google.maps.routes.v1.ComputeRouteMatrixRequest request,
         io.grpc.stub.StreamObserver<com.google.maps.routes.v1.RouteMatrixElement> responseObserver) {
-      asyncUnimplementedUnaryCall(getComputeRouteMatrixMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getComputeRouteMatrixMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getComputeRoutesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.google.maps.routes.v1.ComputeRoutesRequest,
                 com.google.maps.routes.v1.ComputeRoutesResponse>(
                   this, METHODID_COMPUTE_ROUTES)))
           .addMethod(
             getComputeRouteMatrixMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.google.maps.routes.v1.ComputeRouteMatrixRequest,
                 com.google.maps.routes.v1.RouteMatrixElement>(
@@ -294,7 +281,7 @@ public final class RoutesPreferredGrpc {
      */
     public void computeRoutes(com.google.maps.routes.v1.ComputeRoutesRequest request,
         io.grpc.stub.StreamObserver<com.google.maps.routes.v1.ComputeRoutesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getComputeRoutesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -334,7 +321,7 @@ public final class RoutesPreferredGrpc {
      */
     public void computeRouteMatrix(com.google.maps.routes.v1.ComputeRouteMatrixRequest request,
         io.grpc.stub.StreamObserver<com.google.maps.routes.v1.RouteMatrixElement> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getComputeRouteMatrixMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -391,7 +378,7 @@ public final class RoutesPreferredGrpc {
      * </pre>
      */
     public com.google.maps.routes.v1.ComputeRoutesResponse computeRoutes(com.google.maps.routes.v1.ComputeRoutesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getComputeRoutesMethod(), getCallOptions(), request);
     }
 
@@ -431,7 +418,7 @@ public final class RoutesPreferredGrpc {
      */
     public java.util.Iterator<com.google.maps.routes.v1.RouteMatrixElement> computeRouteMatrix(
         com.google.maps.routes.v1.ComputeRouteMatrixRequest request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getComputeRouteMatrixMethod(), getCallOptions(), request);
     }
   }
@@ -489,7 +476,7 @@ public final class RoutesPreferredGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.maps.routes.v1.ComputeRoutesResponse> computeRoutes(
         com.google.maps.routes.v1.ComputeRoutesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getComputeRoutesMethod(), getCallOptions()), request);
     }
   }

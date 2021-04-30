@@ -6,21 +6,21 @@ package com.google.maps.routes.v1;
 /**
  * <pre>
  * Encapsulates the additional information that the user should be informed
- * about, such as possible traffic zone restriction etc. on a route leg.
+ * about, such as possible traffic zone restriction etc. on a leg step.
  * </pre>
  *
- * Protobuf type {@code google.maps.routes.v1.RouteLegTravelAdvisory}
+ * Protobuf type {@code google.maps.routes.v1.RouteLegStepTravelAdvisory}
  */
-public final class RouteLegTravelAdvisory extends
+public final class RouteLegStepTravelAdvisory extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:google.maps.routes.v1.RouteLegTravelAdvisory)
-    RouteLegTravelAdvisoryOrBuilder {
+    // @@protoc_insertion_point(message_implements:google.maps.routes.v1.RouteLegStepTravelAdvisory)
+    RouteLegStepTravelAdvisoryOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use RouteLegTravelAdvisory.newBuilder() to construct.
-  private RouteLegTravelAdvisory(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use RouteLegStepTravelAdvisory.newBuilder() to construct.
+  private RouteLegStepTravelAdvisory(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private RouteLegTravelAdvisory() {
+  private RouteLegStepTravelAdvisory() {
     speedReadingIntervals_ = java.util.Collections.emptyList();
   }
 
@@ -28,7 +28,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new RouteLegTravelAdvisory();
+    return new RouteLegStepTravelAdvisory();
   }
 
   @java.lang.Override
@@ -36,7 +36,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private RouteLegTravelAdvisory(
+  private RouteLegStepTravelAdvisory(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -56,19 +56,6 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            com.google.maps.routes.v1.TollInfo.Builder subBuilder = null;
-            if (tollInfo_ != null) {
-              subBuilder = tollInfo_.toBuilder();
-            }
-            tollInfo_ = input.readMessage(com.google.maps.routes.v1.TollInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(tollInfo_);
-              tollInfo_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
             if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               speedReadingIntervals_ = new java.util.ArrayList<com.google.maps.routes.v1.SpeedReadingInterval>();
               mutable_bitField0_ |= 0x00000001;
@@ -101,82 +88,32 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.google.maps.routes.v1.RouteProto.internal_static_google_maps_routes_v1_RouteLegTravelAdvisory_descriptor;
+    return com.google.maps.routes.v1.RouteProto.internal_static_google_maps_routes_v1_RouteLegStepTravelAdvisory_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.google.maps.routes.v1.RouteProto.internal_static_google_maps_routes_v1_RouteLegTravelAdvisory_fieldAccessorTable
+    return com.google.maps.routes.v1.RouteProto.internal_static_google_maps_routes_v1_RouteLegStepTravelAdvisory_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.maps.routes.v1.RouteLegTravelAdvisory.class, com.google.maps.routes.v1.RouteLegTravelAdvisory.Builder.class);
+            com.google.maps.routes.v1.RouteLegStepTravelAdvisory.class, com.google.maps.routes.v1.RouteLegStepTravelAdvisory.Builder.class);
   }
 
-  public static final int TOLL_INFO_FIELD_NUMBER = 1;
-  private com.google.maps.routes.v1.TollInfo tollInfo_;
-  /**
-   * <pre>
-   * Encapsulates information about tolls on the specific RouteLeg.
-   * This field is only populated if we expect there are tolls on the RouteLeg.
-   * If this field is set but the estimated_price subfield is not populated,
-   * we expect that road contains tolls but we do not know an estimated price.
-   * If this field does not exist, then there is no toll on the RouteLeg.
-   * </pre>
-   *
-   * <code>.google.maps.routes.v1.TollInfo toll_info = 1;</code>
-   * @return Whether the tollInfo field is set.
-   */
-  @java.lang.Override
-  public boolean hasTollInfo() {
-    return tollInfo_ != null;
-  }
-  /**
-   * <pre>
-   * Encapsulates information about tolls on the specific RouteLeg.
-   * This field is only populated if we expect there are tolls on the RouteLeg.
-   * If this field is set but the estimated_price subfield is not populated,
-   * we expect that road contains tolls but we do not know an estimated price.
-   * If this field does not exist, then there is no toll on the RouteLeg.
-   * </pre>
-   *
-   * <code>.google.maps.routes.v1.TollInfo toll_info = 1;</code>
-   * @return The tollInfo.
-   */
-  @java.lang.Override
-  public com.google.maps.routes.v1.TollInfo getTollInfo() {
-    return tollInfo_ == null ? com.google.maps.routes.v1.TollInfo.getDefaultInstance() : tollInfo_;
-  }
-  /**
-   * <pre>
-   * Encapsulates information about tolls on the specific RouteLeg.
-   * This field is only populated if we expect there are tolls on the RouteLeg.
-   * If this field is set but the estimated_price subfield is not populated,
-   * we expect that road contains tolls but we do not know an estimated price.
-   * If this field does not exist, then there is no toll on the RouteLeg.
-   * </pre>
-   *
-   * <code>.google.maps.routes.v1.TollInfo toll_info = 1;</code>
-   */
-  @java.lang.Override
-  public com.google.maps.routes.v1.TollInfoOrBuilder getTollInfoOrBuilder() {
-    return getTollInfo();
-  }
-
-  public static final int SPEED_READING_INTERVALS_FIELD_NUMBER = 2;
+  public static final int SPEED_READING_INTERVALS_FIELD_NUMBER = 1;
   private java.util.List<com.google.maps.routes.v1.SpeedReadingInterval> speedReadingIntervals_;
   /**
    * <pre>
    * Speed reading intervals detailing traffic density. Applicable in case of
    * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-   * The intervals cover the entire polyline of the RouteLg without overlaps,
-   * i.e. the start point of a given interval coincides with the end point of
-   * the preceding interval.
+   * The intervals cover the entire polyline of the RouteLegStep without
+   * overlaps, i.e. the start point of a given interval coincides with the end
+   * point of the preceding interval.
    * Example:
    *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
    *     speed_reading_intervals: [A,C), [C,D), [D,G).
    * </pre>
    *
-   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
    */
   @java.lang.Override
   public java.util.List<com.google.maps.routes.v1.SpeedReadingInterval> getSpeedReadingIntervalsList() {
@@ -186,15 +123,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Speed reading intervals detailing traffic density. Applicable in case of
    * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-   * The intervals cover the entire polyline of the RouteLg without overlaps,
-   * i.e. the start point of a given interval coincides with the end point of
-   * the preceding interval.
+   * The intervals cover the entire polyline of the RouteLegStep without
+   * overlaps, i.e. the start point of a given interval coincides with the end
+   * point of the preceding interval.
    * Example:
    *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
    *     speed_reading_intervals: [A,C), [C,D), [D,G).
    * </pre>
    *
-   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.google.maps.routes.v1.SpeedReadingIntervalOrBuilder> 
@@ -205,15 +142,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Speed reading intervals detailing traffic density. Applicable in case of
    * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-   * The intervals cover the entire polyline of the RouteLg without overlaps,
-   * i.e. the start point of a given interval coincides with the end point of
-   * the preceding interval.
+   * The intervals cover the entire polyline of the RouteLegStep without
+   * overlaps, i.e. the start point of a given interval coincides with the end
+   * point of the preceding interval.
    * Example:
    *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
    *     speed_reading_intervals: [A,C), [C,D), [D,G).
    * </pre>
    *
-   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
    */
   @java.lang.Override
   public int getSpeedReadingIntervalsCount() {
@@ -223,15 +160,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Speed reading intervals detailing traffic density. Applicable in case of
    * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-   * The intervals cover the entire polyline of the RouteLg without overlaps,
-   * i.e. the start point of a given interval coincides with the end point of
-   * the preceding interval.
+   * The intervals cover the entire polyline of the RouteLegStep without
+   * overlaps, i.e. the start point of a given interval coincides with the end
+   * point of the preceding interval.
    * Example:
    *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
    *     speed_reading_intervals: [A,C), [C,D), [D,G).
    * </pre>
    *
-   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
    */
   @java.lang.Override
   public com.google.maps.routes.v1.SpeedReadingInterval getSpeedReadingIntervals(int index) {
@@ -241,15 +178,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Speed reading intervals detailing traffic density. Applicable in case of
    * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-   * The intervals cover the entire polyline of the RouteLg without overlaps,
-   * i.e. the start point of a given interval coincides with the end point of
-   * the preceding interval.
+   * The intervals cover the entire polyline of the RouteLegStep without
+   * overlaps, i.e. the start point of a given interval coincides with the end
+   * point of the preceding interval.
    * Example:
    *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
    *     speed_reading_intervals: [A,C), [C,D), [D,G).
    * </pre>
    *
-   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+   * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
    */
   @java.lang.Override
   public com.google.maps.routes.v1.SpeedReadingIntervalOrBuilder getSpeedReadingIntervalsOrBuilder(
@@ -271,11 +208,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (tollInfo_ != null) {
-      output.writeMessage(1, getTollInfo());
-    }
     for (int i = 0; i < speedReadingIntervals_.size(); i++) {
-      output.writeMessage(2, speedReadingIntervals_.get(i));
+      output.writeMessage(1, speedReadingIntervals_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -286,13 +220,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (tollInfo_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getTollInfo());
-    }
     for (int i = 0; i < speedReadingIntervals_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, speedReadingIntervals_.get(i));
+        .computeMessageSize(1, speedReadingIntervals_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -304,16 +234,11 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.google.maps.routes.v1.RouteLegTravelAdvisory)) {
+    if (!(obj instanceof com.google.maps.routes.v1.RouteLegStepTravelAdvisory)) {
       return super.equals(obj);
     }
-    com.google.maps.routes.v1.RouteLegTravelAdvisory other = (com.google.maps.routes.v1.RouteLegTravelAdvisory) obj;
+    com.google.maps.routes.v1.RouteLegStepTravelAdvisory other = (com.google.maps.routes.v1.RouteLegStepTravelAdvisory) obj;
 
-    if (hasTollInfo() != other.hasTollInfo()) return false;
-    if (hasTollInfo()) {
-      if (!getTollInfo()
-          .equals(other.getTollInfo())) return false;
-    }
     if (!getSpeedReadingIntervalsList()
         .equals(other.getSpeedReadingIntervalsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -327,10 +252,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasTollInfo()) {
-      hash = (37 * hash) + TOLL_INFO_FIELD_NUMBER;
-      hash = (53 * hash) + getTollInfo().hashCode();
-    }
     if (getSpeedReadingIntervalsCount() > 0) {
       hash = (37 * hash) + SPEED_READING_INTERVALS_FIELD_NUMBER;
       hash = (53 * hash) + getSpeedReadingIntervalsList().hashCode();
@@ -340,69 +261,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.google.maps.routes.v1.RouteLegTravelAdvisory parseFrom(
+  public static com.google.maps.routes.v1.RouteLegStepTravelAdvisory parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.google.maps.routes.v1.RouteLegTravelAdvisory parseFrom(
+  public static com.google.maps.routes.v1.RouteLegStepTravelAdvisory parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.maps.routes.v1.RouteLegTravelAdvisory parseFrom(
+  public static com.google.maps.routes.v1.RouteLegStepTravelAdvisory parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.google.maps.routes.v1.RouteLegTravelAdvisory parseFrom(
+  public static com.google.maps.routes.v1.RouteLegStepTravelAdvisory parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.maps.routes.v1.RouteLegTravelAdvisory parseFrom(byte[] data)
+  public static com.google.maps.routes.v1.RouteLegStepTravelAdvisory parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.google.maps.routes.v1.RouteLegTravelAdvisory parseFrom(
+  public static com.google.maps.routes.v1.RouteLegStepTravelAdvisory parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.google.maps.routes.v1.RouteLegTravelAdvisory parseFrom(java.io.InputStream input)
+  public static com.google.maps.routes.v1.RouteLegStepTravelAdvisory parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.google.maps.routes.v1.RouteLegTravelAdvisory parseFrom(
+  public static com.google.maps.routes.v1.RouteLegStepTravelAdvisory parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.google.maps.routes.v1.RouteLegTravelAdvisory parseDelimitedFrom(java.io.InputStream input)
+  public static com.google.maps.routes.v1.RouteLegStepTravelAdvisory parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.google.maps.routes.v1.RouteLegTravelAdvisory parseDelimitedFrom(
+  public static com.google.maps.routes.v1.RouteLegStepTravelAdvisory parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.google.maps.routes.v1.RouteLegTravelAdvisory parseFrom(
+  public static com.google.maps.routes.v1.RouteLegStepTravelAdvisory parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.google.maps.routes.v1.RouteLegTravelAdvisory parseFrom(
+  public static com.google.maps.routes.v1.RouteLegStepTravelAdvisory parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -415,7 +336,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.google.maps.routes.v1.RouteLegTravelAdvisory prototype) {
+  public static Builder newBuilder(com.google.maps.routes.v1.RouteLegStepTravelAdvisory prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -433,29 +354,29 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Encapsulates the additional information that the user should be informed
-   * about, such as possible traffic zone restriction etc. on a route leg.
+   * about, such as possible traffic zone restriction etc. on a leg step.
    * </pre>
    *
-   * Protobuf type {@code google.maps.routes.v1.RouteLegTravelAdvisory}
+   * Protobuf type {@code google.maps.routes.v1.RouteLegStepTravelAdvisory}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:google.maps.routes.v1.RouteLegTravelAdvisory)
-      com.google.maps.routes.v1.RouteLegTravelAdvisoryOrBuilder {
+      // @@protoc_insertion_point(builder_implements:google.maps.routes.v1.RouteLegStepTravelAdvisory)
+      com.google.maps.routes.v1.RouteLegStepTravelAdvisoryOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.maps.routes.v1.RouteProto.internal_static_google_maps_routes_v1_RouteLegTravelAdvisory_descriptor;
+      return com.google.maps.routes.v1.RouteProto.internal_static_google_maps_routes_v1_RouteLegStepTravelAdvisory_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.maps.routes.v1.RouteProto.internal_static_google_maps_routes_v1_RouteLegTravelAdvisory_fieldAccessorTable
+      return com.google.maps.routes.v1.RouteProto.internal_static_google_maps_routes_v1_RouteLegStepTravelAdvisory_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.maps.routes.v1.RouteLegTravelAdvisory.class, com.google.maps.routes.v1.RouteLegTravelAdvisory.Builder.class);
+              com.google.maps.routes.v1.RouteLegStepTravelAdvisory.class, com.google.maps.routes.v1.RouteLegStepTravelAdvisory.Builder.class);
     }
 
-    // Construct using com.google.maps.routes.v1.RouteLegTravelAdvisory.newBuilder()
+    // Construct using com.google.maps.routes.v1.RouteLegStepTravelAdvisory.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -474,12 +395,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (tollInfoBuilder_ == null) {
-        tollInfo_ = null;
-      } else {
-        tollInfo_ = null;
-        tollInfoBuilder_ = null;
-      }
       if (speedReadingIntervalsBuilder_ == null) {
         speedReadingIntervals_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -492,17 +407,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.google.maps.routes.v1.RouteProto.internal_static_google_maps_routes_v1_RouteLegTravelAdvisory_descriptor;
+      return com.google.maps.routes.v1.RouteProto.internal_static_google_maps_routes_v1_RouteLegStepTravelAdvisory_descriptor;
     }
 
     @java.lang.Override
-    public com.google.maps.routes.v1.RouteLegTravelAdvisory getDefaultInstanceForType() {
-      return com.google.maps.routes.v1.RouteLegTravelAdvisory.getDefaultInstance();
+    public com.google.maps.routes.v1.RouteLegStepTravelAdvisory getDefaultInstanceForType() {
+      return com.google.maps.routes.v1.RouteLegStepTravelAdvisory.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.google.maps.routes.v1.RouteLegTravelAdvisory build() {
-      com.google.maps.routes.v1.RouteLegTravelAdvisory result = buildPartial();
+    public com.google.maps.routes.v1.RouteLegStepTravelAdvisory build() {
+      com.google.maps.routes.v1.RouteLegStepTravelAdvisory result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -510,14 +425,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.google.maps.routes.v1.RouteLegTravelAdvisory buildPartial() {
-      com.google.maps.routes.v1.RouteLegTravelAdvisory result = new com.google.maps.routes.v1.RouteLegTravelAdvisory(this);
+    public com.google.maps.routes.v1.RouteLegStepTravelAdvisory buildPartial() {
+      com.google.maps.routes.v1.RouteLegStepTravelAdvisory result = new com.google.maps.routes.v1.RouteLegStepTravelAdvisory(this);
       int from_bitField0_ = bitField0_;
-      if (tollInfoBuilder_ == null) {
-        result.tollInfo_ = tollInfo_;
-      } else {
-        result.tollInfo_ = tollInfoBuilder_.build();
-      }
       if (speedReadingIntervalsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           speedReadingIntervals_ = java.util.Collections.unmodifiableList(speedReadingIntervals_);
@@ -565,19 +475,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.google.maps.routes.v1.RouteLegTravelAdvisory) {
-        return mergeFrom((com.google.maps.routes.v1.RouteLegTravelAdvisory)other);
+      if (other instanceof com.google.maps.routes.v1.RouteLegStepTravelAdvisory) {
+        return mergeFrom((com.google.maps.routes.v1.RouteLegStepTravelAdvisory)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.google.maps.routes.v1.RouteLegTravelAdvisory other) {
-      if (other == com.google.maps.routes.v1.RouteLegTravelAdvisory.getDefaultInstance()) return this;
-      if (other.hasTollInfo()) {
-        mergeTollInfo(other.getTollInfo());
-      }
+    public Builder mergeFrom(com.google.maps.routes.v1.RouteLegStepTravelAdvisory other) {
+      if (other == com.google.maps.routes.v1.RouteLegStepTravelAdvisory.getDefaultInstance()) return this;
       if (speedReadingIntervalsBuilder_ == null) {
         if (!other.speedReadingIntervals_.isEmpty()) {
           if (speedReadingIntervals_.isEmpty()) {
@@ -619,11 +526,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.maps.routes.v1.RouteLegTravelAdvisory parsedMessage = null;
+      com.google.maps.routes.v1.RouteLegStepTravelAdvisory parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.maps.routes.v1.RouteLegTravelAdvisory) e.getUnfinishedMessage();
+        parsedMessage = (com.google.maps.routes.v1.RouteLegStepTravelAdvisory) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -633,197 +540,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     private int bitField0_;
-
-    private com.google.maps.routes.v1.TollInfo tollInfo_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.maps.routes.v1.TollInfo, com.google.maps.routes.v1.TollInfo.Builder, com.google.maps.routes.v1.TollInfoOrBuilder> tollInfoBuilder_;
-    /**
-     * <pre>
-     * Encapsulates information about tolls on the specific RouteLeg.
-     * This field is only populated if we expect there are tolls on the RouteLeg.
-     * If this field is set but the estimated_price subfield is not populated,
-     * we expect that road contains tolls but we do not know an estimated price.
-     * If this field does not exist, then there is no toll on the RouteLeg.
-     * </pre>
-     *
-     * <code>.google.maps.routes.v1.TollInfo toll_info = 1;</code>
-     * @return Whether the tollInfo field is set.
-     */
-    public boolean hasTollInfo() {
-      return tollInfoBuilder_ != null || tollInfo_ != null;
-    }
-    /**
-     * <pre>
-     * Encapsulates information about tolls on the specific RouteLeg.
-     * This field is only populated if we expect there are tolls on the RouteLeg.
-     * If this field is set but the estimated_price subfield is not populated,
-     * we expect that road contains tolls but we do not know an estimated price.
-     * If this field does not exist, then there is no toll on the RouteLeg.
-     * </pre>
-     *
-     * <code>.google.maps.routes.v1.TollInfo toll_info = 1;</code>
-     * @return The tollInfo.
-     */
-    public com.google.maps.routes.v1.TollInfo getTollInfo() {
-      if (tollInfoBuilder_ == null) {
-        return tollInfo_ == null ? com.google.maps.routes.v1.TollInfo.getDefaultInstance() : tollInfo_;
-      } else {
-        return tollInfoBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Encapsulates information about tolls on the specific RouteLeg.
-     * This field is only populated if we expect there are tolls on the RouteLeg.
-     * If this field is set but the estimated_price subfield is not populated,
-     * we expect that road contains tolls but we do not know an estimated price.
-     * If this field does not exist, then there is no toll on the RouteLeg.
-     * </pre>
-     *
-     * <code>.google.maps.routes.v1.TollInfo toll_info = 1;</code>
-     */
-    public Builder setTollInfo(com.google.maps.routes.v1.TollInfo value) {
-      if (tollInfoBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        tollInfo_ = value;
-        onChanged();
-      } else {
-        tollInfoBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Encapsulates information about tolls on the specific RouteLeg.
-     * This field is only populated if we expect there are tolls on the RouteLeg.
-     * If this field is set but the estimated_price subfield is not populated,
-     * we expect that road contains tolls but we do not know an estimated price.
-     * If this field does not exist, then there is no toll on the RouteLeg.
-     * </pre>
-     *
-     * <code>.google.maps.routes.v1.TollInfo toll_info = 1;</code>
-     */
-    public Builder setTollInfo(
-        com.google.maps.routes.v1.TollInfo.Builder builderForValue) {
-      if (tollInfoBuilder_ == null) {
-        tollInfo_ = builderForValue.build();
-        onChanged();
-      } else {
-        tollInfoBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Encapsulates information about tolls on the specific RouteLeg.
-     * This field is only populated if we expect there are tolls on the RouteLeg.
-     * If this field is set but the estimated_price subfield is not populated,
-     * we expect that road contains tolls but we do not know an estimated price.
-     * If this field does not exist, then there is no toll on the RouteLeg.
-     * </pre>
-     *
-     * <code>.google.maps.routes.v1.TollInfo toll_info = 1;</code>
-     */
-    public Builder mergeTollInfo(com.google.maps.routes.v1.TollInfo value) {
-      if (tollInfoBuilder_ == null) {
-        if (tollInfo_ != null) {
-          tollInfo_ =
-            com.google.maps.routes.v1.TollInfo.newBuilder(tollInfo_).mergeFrom(value).buildPartial();
-        } else {
-          tollInfo_ = value;
-        }
-        onChanged();
-      } else {
-        tollInfoBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Encapsulates information about tolls on the specific RouteLeg.
-     * This field is only populated if we expect there are tolls on the RouteLeg.
-     * If this field is set but the estimated_price subfield is not populated,
-     * we expect that road contains tolls but we do not know an estimated price.
-     * If this field does not exist, then there is no toll on the RouteLeg.
-     * </pre>
-     *
-     * <code>.google.maps.routes.v1.TollInfo toll_info = 1;</code>
-     */
-    public Builder clearTollInfo() {
-      if (tollInfoBuilder_ == null) {
-        tollInfo_ = null;
-        onChanged();
-      } else {
-        tollInfo_ = null;
-        tollInfoBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Encapsulates information about tolls on the specific RouteLeg.
-     * This field is only populated if we expect there are tolls on the RouteLeg.
-     * If this field is set but the estimated_price subfield is not populated,
-     * we expect that road contains tolls but we do not know an estimated price.
-     * If this field does not exist, then there is no toll on the RouteLeg.
-     * </pre>
-     *
-     * <code>.google.maps.routes.v1.TollInfo toll_info = 1;</code>
-     */
-    public com.google.maps.routes.v1.TollInfo.Builder getTollInfoBuilder() {
-      
-      onChanged();
-      return getTollInfoFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Encapsulates information about tolls on the specific RouteLeg.
-     * This field is only populated if we expect there are tolls on the RouteLeg.
-     * If this field is set but the estimated_price subfield is not populated,
-     * we expect that road contains tolls but we do not know an estimated price.
-     * If this field does not exist, then there is no toll on the RouteLeg.
-     * </pre>
-     *
-     * <code>.google.maps.routes.v1.TollInfo toll_info = 1;</code>
-     */
-    public com.google.maps.routes.v1.TollInfoOrBuilder getTollInfoOrBuilder() {
-      if (tollInfoBuilder_ != null) {
-        return tollInfoBuilder_.getMessageOrBuilder();
-      } else {
-        return tollInfo_ == null ?
-            com.google.maps.routes.v1.TollInfo.getDefaultInstance() : tollInfo_;
-      }
-    }
-    /**
-     * <pre>
-     * Encapsulates information about tolls on the specific RouteLeg.
-     * This field is only populated if we expect there are tolls on the RouteLeg.
-     * If this field is set but the estimated_price subfield is not populated,
-     * we expect that road contains tolls but we do not know an estimated price.
-     * If this field does not exist, then there is no toll on the RouteLeg.
-     * </pre>
-     *
-     * <code>.google.maps.routes.v1.TollInfo toll_info = 1;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.maps.routes.v1.TollInfo, com.google.maps.routes.v1.TollInfo.Builder, com.google.maps.routes.v1.TollInfoOrBuilder> 
-        getTollInfoFieldBuilder() {
-      if (tollInfoBuilder_ == null) {
-        tollInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.maps.routes.v1.TollInfo, com.google.maps.routes.v1.TollInfo.Builder, com.google.maps.routes.v1.TollInfoOrBuilder>(
-                getTollInfo(),
-                getParentForChildren(),
-                isClean());
-        tollInfo_ = null;
-      }
-      return tollInfoBuilder_;
-    }
 
     private java.util.List<com.google.maps.routes.v1.SpeedReadingInterval> speedReadingIntervals_ =
       java.util.Collections.emptyList();
@@ -841,15 +557,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public java.util.List<com.google.maps.routes.v1.SpeedReadingInterval> getSpeedReadingIntervalsList() {
       if (speedReadingIntervalsBuilder_ == null) {
@@ -862,15 +578,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public int getSpeedReadingIntervalsCount() {
       if (speedReadingIntervalsBuilder_ == null) {
@@ -883,15 +599,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public com.google.maps.routes.v1.SpeedReadingInterval getSpeedReadingIntervals(int index) {
       if (speedReadingIntervalsBuilder_ == null) {
@@ -904,15 +620,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public Builder setSpeedReadingIntervals(
         int index, com.google.maps.routes.v1.SpeedReadingInterval value) {
@@ -932,15 +648,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public Builder setSpeedReadingIntervals(
         int index, com.google.maps.routes.v1.SpeedReadingInterval.Builder builderForValue) {
@@ -957,15 +673,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public Builder addSpeedReadingIntervals(com.google.maps.routes.v1.SpeedReadingInterval value) {
       if (speedReadingIntervalsBuilder_ == null) {
@@ -984,15 +700,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public Builder addSpeedReadingIntervals(
         int index, com.google.maps.routes.v1.SpeedReadingInterval value) {
@@ -1012,15 +728,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public Builder addSpeedReadingIntervals(
         com.google.maps.routes.v1.SpeedReadingInterval.Builder builderForValue) {
@@ -1037,15 +753,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public Builder addSpeedReadingIntervals(
         int index, com.google.maps.routes.v1.SpeedReadingInterval.Builder builderForValue) {
@@ -1062,15 +778,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public Builder addAllSpeedReadingIntervals(
         java.lang.Iterable<? extends com.google.maps.routes.v1.SpeedReadingInterval> values) {
@@ -1088,15 +804,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public Builder clearSpeedReadingIntervals() {
       if (speedReadingIntervalsBuilder_ == null) {
@@ -1112,15 +828,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public Builder removeSpeedReadingIntervals(int index) {
       if (speedReadingIntervalsBuilder_ == null) {
@@ -1136,15 +852,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public com.google.maps.routes.v1.SpeedReadingInterval.Builder getSpeedReadingIntervalsBuilder(
         int index) {
@@ -1154,15 +870,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public com.google.maps.routes.v1.SpeedReadingIntervalOrBuilder getSpeedReadingIntervalsOrBuilder(
         int index) {
@@ -1175,15 +891,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public java.util.List<? extends com.google.maps.routes.v1.SpeedReadingIntervalOrBuilder> 
          getSpeedReadingIntervalsOrBuilderList() {
@@ -1197,15 +913,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public com.google.maps.routes.v1.SpeedReadingInterval.Builder addSpeedReadingIntervalsBuilder() {
       return getSpeedReadingIntervalsFieldBuilder().addBuilder(
@@ -1215,15 +931,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public com.google.maps.routes.v1.SpeedReadingInterval.Builder addSpeedReadingIntervalsBuilder(
         int index) {
@@ -1234,15 +950,15 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
      * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
-     * The intervals cover the entire polyline of the RouteLg without overlaps,
-     * i.e. the start point of a given interval coincides with the end point of
-     * the preceding interval.
+     * The intervals cover the entire polyline of the RouteLegStep without
+     * overlaps, i.e. the start point of a given interval coincides with the end
+     * point of the preceding interval.
      * Example:
      *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
      *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
-     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 2;</code>
+     * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 1;</code>
      */
     public java.util.List<com.google.maps.routes.v1.SpeedReadingInterval.Builder> 
          getSpeedReadingIntervalsBuilderList() {
@@ -1275,41 +991,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:google.maps.routes.v1.RouteLegTravelAdvisory)
+    // @@protoc_insertion_point(builder_scope:google.maps.routes.v1.RouteLegStepTravelAdvisory)
   }
 
-  // @@protoc_insertion_point(class_scope:google.maps.routes.v1.RouteLegTravelAdvisory)
-  private static final com.google.maps.routes.v1.RouteLegTravelAdvisory DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:google.maps.routes.v1.RouteLegStepTravelAdvisory)
+  private static final com.google.maps.routes.v1.RouteLegStepTravelAdvisory DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.google.maps.routes.v1.RouteLegTravelAdvisory();
+    DEFAULT_INSTANCE = new com.google.maps.routes.v1.RouteLegStepTravelAdvisory();
   }
 
-  public static com.google.maps.routes.v1.RouteLegTravelAdvisory getDefaultInstance() {
+  public static com.google.maps.routes.v1.RouteLegStepTravelAdvisory getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<RouteLegTravelAdvisory>
-      PARSER = new com.google.protobuf.AbstractParser<RouteLegTravelAdvisory>() {
+  private static final com.google.protobuf.Parser<RouteLegStepTravelAdvisory>
+      PARSER = new com.google.protobuf.AbstractParser<RouteLegStepTravelAdvisory>() {
     @java.lang.Override
-    public RouteLegTravelAdvisory parsePartialFrom(
+    public RouteLegStepTravelAdvisory parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new RouteLegTravelAdvisory(input, extensionRegistry);
+      return new RouteLegStepTravelAdvisory(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<RouteLegTravelAdvisory> parser() {
+  public static com.google.protobuf.Parser<RouteLegStepTravelAdvisory> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<RouteLegTravelAdvisory> getParserForType() {
+  public com.google.protobuf.Parser<RouteLegStepTravelAdvisory> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.maps.routes.v1.RouteLegTravelAdvisory getDefaultInstanceForType() {
+  public com.google.maps.routes.v1.RouteLegStepTravelAdvisory getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

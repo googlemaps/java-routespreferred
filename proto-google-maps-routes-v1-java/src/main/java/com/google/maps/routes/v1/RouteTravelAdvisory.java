@@ -224,13 +224,13 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Speed reading intervals detailing traffic density. Applicable in case of
-   * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+   * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
    * The intervals cover the entire polyline of the route without overlaps, i.e.
    * the start point of a given interval coincides with the end point of the
    * preceding interval.
    * Example:
-   *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-   *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+   *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+   *     speed_reading_intervals: [A,C), [C,D), [D,G).
    * </pre>
    *
    * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -242,13 +242,13 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Speed reading intervals detailing traffic density. Applicable in case of
-   * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+   * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
    * The intervals cover the entire polyline of the route without overlaps, i.e.
    * the start point of a given interval coincides with the end point of the
    * preceding interval.
    * Example:
-   *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-   *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+   *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+   *     speed_reading_intervals: [A,C), [C,D), [D,G).
    * </pre>
    *
    * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -261,13 +261,13 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Speed reading intervals detailing traffic density. Applicable in case of
-   * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+   * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
    * The intervals cover the entire polyline of the route without overlaps, i.e.
    * the start point of a given interval coincides with the end point of the
    * preceding interval.
    * Example:
-   *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-   *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+   *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+   *     speed_reading_intervals: [A,C), [C,D), [D,G).
    * </pre>
    *
    * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -279,13 +279,13 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Speed reading intervals detailing traffic density. Applicable in case of
-   * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+   * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
    * The intervals cover the entire polyline of the route without overlaps, i.e.
    * the start point of a given interval coincides with the end point of the
    * preceding interval.
    * Example:
-   *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-   *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+   *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+   *     speed_reading_intervals: [A,C), [C,D), [D,G).
    * </pre>
    *
    * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -297,13 +297,13 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Speed reading intervals detailing traffic density. Applicable in case of
-   * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+   * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
    * The intervals cover the entire polyline of the route without overlaps, i.e.
    * the start point of a given interval coincides with the end point of the
    * preceding interval.
    * Example:
-   *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-   *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+   *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+   *     speed_reading_intervals: [A,C), [C,D), [D,G).
    * </pre>
    *
    * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1100,13 +1100,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1121,13 +1121,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1142,13 +1142,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1163,13 +1163,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1191,13 +1191,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1216,13 +1216,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1243,13 +1243,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1271,13 +1271,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1296,13 +1296,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1321,13 +1321,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1347,13 +1347,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1371,13 +1371,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1395,13 +1395,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1413,13 +1413,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1434,13 +1434,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1456,13 +1456,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1474,13 +1474,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
@@ -1493,13 +1493,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Speed reading intervals detailing traffic density. Applicable in case of
-     * TRAFFIC_AWARE and TRAFFIC_AWARE_OPTIMAL routing preferences.
+     * `TRAFFIC_AWARE` and `TRAFFIC_AWARE_OPTIMAL` routing preferences.
      * The intervals cover the entire polyline of the route without overlaps, i.e.
      * the start point of a given interval coincides with the end point of the
      * preceding interval.
      * Example:
-     *   polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
-     *   speed_reading_intervals: [A,C),  [C,D), [D,G).
+     *     polyline: A ---- B ---- C ---- D ---- E ---- F ---- G
+     *     speed_reading_intervals: [A,C), [C,D), [D,G).
      * </pre>
      *
      * <code>repeated .google.maps.routes.v1.SpeedReadingInterval speed_reading_intervals = 3;</code>
